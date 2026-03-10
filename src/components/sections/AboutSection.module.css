@@ -1,0 +1,107 @@
+.about {
+  background-color: var(--color-background-alt);
+  padding: var(--space-3xl) 0;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.info {
+  background-color: var(--color-background);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+}
+
+.contactItem svg {
+  color: var(--color-primary);
+}
+
+.section {
+  margin-bottom: var(--space-xl);
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+}
+
+.sectionTitle svg {
+  color: var(--color-primary);
+}
+
+.educationList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.educationItem {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  background-color: var(--color-background-alt);
+  border-radius: var(--radius-md);
+}
+
+.degree {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.field {
+  color: var(--color-text);
+}
+
+.school {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+}
+
+.year {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+  .educationItem {
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: var(--space-md);
+  }
+}

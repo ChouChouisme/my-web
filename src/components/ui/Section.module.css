@@ -1,0 +1,41 @@
+.section {
+  padding: var(--space-3xl) 0;
+}
+
+.default {
+  background-color: var(--color-background);
+}
+
+.alt {
+  background-color: var(--color-background-alt);
+}
+
+.header {
+  margin-bottom: var(--space-2xl);
+}
+
+.title {
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
+.subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-light);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: var(--space-3xl) 0;
+  }
+
+  .title {
+    font-size: var(--font-size-4xl);
+  }
+}
