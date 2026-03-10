@@ -32,6 +32,21 @@
 .nav {
   display: none;
   gap: var(--space-xl);
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  background-color: rgba(250, 250, 249, 0.98);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-md) 0;
+  z-index: 99;
+  box-shadow: var(--shadow-md);
+}
+
+.nav.navOpen {
+  display: flex;
 }
 
 .navLink {
@@ -42,9 +57,11 @@
   color: var(--color-text-light);
   cursor: pointer;
   transition: color var(--transition-fast);
-  padding: var(--space-xs) 0;
+  padding: var(--space-md) var(--space-lg);
   position: relative;
   letter-spacing: -0.01em;
+  width: 100%;
+  text-align: left;
 }
 
 .navLink::after {
@@ -79,7 +96,26 @@
 
 @media (min-width: 768px) {
   .nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+    backdrop-filter: none;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    top: auto;
+    z-index: auto;
+  }
+
+  .nav.navOpen {
     display: flex;
+  }
+
+  .navLink {
+    padding: var(--space-xs) 0;
+    width: auto;
+    text-align: center;
   }
 
   .menuButton {
