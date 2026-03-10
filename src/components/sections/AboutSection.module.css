@@ -69,9 +69,9 @@
 }
 
 .educationItem {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xs);
   padding: var(--space-lg);
   background-color: var(--color-background-alt);
   border-radius: var(--radius-md);
@@ -113,25 +113,8 @@
 
 @media (min-width: 768px) {
   .educationItem {
-    flex-direction: row;
+    grid-template-columns: auto 1fr auto auto;
     align-items: center;
     gap: var(--space-lg);
-  }
-
-  .degree {
-    min-width: 3.5rem;
-  }
-
-  .field {
-    min-width: 8rem;
-  }
-
-  .school {
-    flex: 1;
-  }
-
-  .year {
-    min-width: 3rem;
-    text-align: right;
   }
 }
