@@ -1,9 +1,10 @@
 .tag {
   display: inline-flex;
   align-items: center;
-  padding: var(--space-xs) var(--space-sm);
+  padding: 0.375rem 0.75rem;
   font-size: var(--font-size-xs);
   font-weight: 500;
+  letter-spacing: -0.01em;
   border-radius: var(--radius-full);
   background-color: var(--color-background-alt);
   color: var(--color-text-light);
@@ -15,16 +16,16 @@
 }
 
 .primary {
-  background-color: rgba(37, 99, 235, 0.1);
-  color: var(--color-primary);
+  background-color: var(--color-primary-subtle);
+  color: var(--color-primary-dark);
 }
 
 .accent {
-  background-color: rgba(245, 158, 11, 0.1);
+  background-color: rgba(217, 119, 6, 0.12);
   color: var(--color-accent-dark);
 }
 
 .success {
-  background-color: rgba(16, 185, 129, 0.1);
-  color: #059669;
+  background-color: rgba(180, 83, 9, 0.1);
+  color: #92400E;
 }

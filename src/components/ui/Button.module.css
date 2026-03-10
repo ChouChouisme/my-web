@@ -4,9 +4,10 @@
   justify-content: center;
   gap: var(--space-sm);
   font-weight: 500;
+  letter-spacing: -0.01em;
   border-radius: var(--radius-md);
   border: none;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-normal);
   text-decoration: none;
 }
 
@@ -14,26 +15,34 @@
   transform: translateY(-1px);
 }
 
+.button:active {
+  transform: translateY(0);
+}
+
 /* Variants */
 .primary {
-  background-color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: white;
+  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.25);
 }
 
 .primary:hover {
-  background-color: var(--color-primary-dark);
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, #92400E 100%);
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.35);
   color: white;
 }
 
 .secondary {
-  background-color: var(--color-background-alt);
+  background-color: var(--color-background-elevated);
   color: var(--color-text);
   border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
 }
 
 .secondary:hover {
-  background-color: var(--color-border-light);
-  color: var(--color-text);
+  background-color: var(--color-background-alt);
+  border-color: var(--color-primary);
+  color: var(--color-primary-dark);
 }
 
 .accent {
@@ -49,7 +58,7 @@
 .outline {
   background-color: transparent;
   color: var(--color-primary);
-  border: 1px solid var(--color-primary);
+  border: 1.5px solid var(--color-primary);
 }
 
 .outline:hover {
@@ -59,16 +68,16 @@
 
 /* Sizes */
 .sm {
-  padding: var(--space-xs) var(--space-sm);
+  padding: 0.5rem 0.875rem;
   font-size: var(--font-size-sm);
 }
 
 .md {
-  padding: var(--space-sm) var(--space-md);
+  padding: 0.625rem 1.25rem;
   font-size: var(--font-size-base);
 }
 
 .lg {
-  padding: var(--space-md) var(--space-lg);
+  padding: 0.875rem 1.75rem;
   font-size: var(--font-size-lg);
 }

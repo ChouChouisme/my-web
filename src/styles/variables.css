@@ -1,17 +1,35 @@
 :root {
-  /* Color Palette */
-  --color-primary: #2563eb;
-  --color-primary-dark: #1d4ed8;
-  --color-primary-light: #3b82f6;
-  --color-text: #0f172a;
-  --color-text-light: #475569;
-  --color-text-muted: #64748b;
-  --color-accent: #f59e0b;
-  --color-accent-dark: #d97706;
-  --color-background: #ffffff;
-  --color-background-alt: #f8fafc;
-  --color-border: #e2e8f0;
-  --color-border-light: #f1f5f9;
+  /* Anthropic Design System - Warm, Refined Palette */
+  --color-primary: #D97706;
+  --color-primary-dark: #B45309;
+  --color-primary-light: #F59E0B;
+  --color-primary-subtle: rgba(217, 119, 6, 0.1);
+  --color-text: #1C1917;
+  --color-text-light: #44403C;
+  --color-text-muted: #78716C;
+  --color-accent: #D97706;
+  --color-accent-dark: #B45309;
+  --color-background: #FAFAF9;
+  --color-background-elevated: #FFFFFF;
+  --color-background-alt: #F5F5F4;
+  --color-border: #E7E5E4;
+  --color-border-light: #F5F5F4;
+
+  /* Typography - Using distinctive serif for headings */
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  --font-family: var(--font-body);
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.75rem;
+  --font-size-5xl: 3.5rem;
 
   /* Spacing */
   --space-xs: 0.5rem;
@@ -21,38 +39,28 @@
   --space-xl: 2rem;
   --space-2xl: 3rem;
   --space-3xl: 4rem;
+  --space-4xl: 6rem;
 
-  /* Typography */
-  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
-  --font-size-3xl: 2rem;
-  --font-size-4xl: 2.5rem;
-  --font-size-5xl: 3rem;
-
-  /* Border Radius */
+  /* Border Radius - More refined, less rounded */
   --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
   --radius-full: 9999px;
 
-  /* Shadows */
+  /* Shadows - Softer, more layered */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.08);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 
   /* Transitions */
-  --transition-fast: 150ms ease;
-  --transition-normal: 250ms ease;
-  --transition-slow: 350ms ease;
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Container */
-  --container-max: 1200px;
+  --container-max: 1100px;
   --container-padding: var(--space-md);
 }
 

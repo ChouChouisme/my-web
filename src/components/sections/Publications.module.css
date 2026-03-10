@@ -10,32 +10,37 @@
 
 .card {
   position: relative;
+  padding: var(--space-xl);
   padding-left: var(--space-xl);
 }
 
 .year {
   position: absolute;
-  left: var(--space-lg);
-  top: var(--space-lg);
-  font-size: var(--font-size-sm);
+  left: var(--space-xl);
+  top: var(--space-xl);
+  font-size: var(--font-size-xs);
   font-weight: 600;
-  color: var(--color-primary);
-  background-color: rgba(37, 99, 235, 0.1);
-  padding: var(--space-xs) var(--space-sm);
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-subtle);
+  padding: 0.375rem 0.75rem;
   border-radius: var(--radius-sm);
+  letter-spacing: 0.02em;
 }
 
 .title {
+  font-family: var(--font-display);
   font-size: var(--font-size-lg);
   font-weight: 600;
   color: var(--color-text);
   margin-bottom: var(--space-sm);
   line-height: 1.4;
+  letter-spacing: -0.01em;
 }
 
 .title a {
   color: inherit;
   text-decoration: none;
+  transition: color var(--transition-fast);
 }
 
 .title a:hover {
@@ -53,12 +58,13 @@
   color: var(--color-text-muted);
   font-style: italic;
   margin-bottom: var(--space-md);
+  line-height: 1.5;
 }
 
 .meta {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: var(--space-md);
 }
 
 .tags {
@@ -70,7 +76,7 @@
 .stats {
   display: flex;
   align-items: center;
-  gap: var(--space-md);
+  gap: var(--space-lg);
 }
 
 .citations {
@@ -79,6 +85,7 @@
   gap: var(--space-xs);
   font-size: var(--font-size-sm);
   color: var(--color-accent-dark);
+  font-weight: 500;
 }
 
 .doi {
@@ -87,6 +94,7 @@
   gap: var(--space-xs);
   font-size: var(--font-size-sm);
   color: var(--color-primary);
+  font-weight: 500;
 }
 
 .doi:hover {
@@ -98,5 +106,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .title {
+    font-size: 1.25rem;
   }
 }

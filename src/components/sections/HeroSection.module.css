@@ -1,10 +1,36 @@
 .hero {
-  min-height: calc(100vh - 64px);
+  min-height: calc(100vh - 72px);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--color-background) 0%, var(--color-background-alt) 100%);
+  background: linear-gradient(180deg, var(--color-background) 0%, rgba(217, 119, 6, 0.02) 100%);
   position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background element */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(180, 83, 9, 0.04) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
 }
 
 .container {
@@ -14,40 +40,49 @@
 
 .content {
   text-align: center;
-  max-width: 700px;
+  max-width: 720px;
+  position: relative;
+  z-index: 1;
 }
 
 .greeting {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
   color: var(--color-primary);
-  margin-bottom: var(--space-sm);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-lg);
 }
 
 .name {
+  font-family: var(--font-display);
   font-size: var(--font-size-4xl);
   font-weight: 700;
   color: var(--color-text);
-  margin-bottom: var(--space-xs);
+  margin-bottom: var(--space-sm);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
 }
 
 .title {
   font-size: var(--font-size-xl);
   color: var(--color-text-light);
   margin-bottom: var(--space-xs);
+  font-weight: 500;
 }
 
 .institution {
   font-size: var(--font-size-lg);
   color: var(--color-text-muted);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-xl);
 }
 
 .bio {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-lg);
   color: var(--color-text-light);
   line-height: 1.8;
-  margin-bottom: var(--space-xl);
-  max-width: 600px;
+  margin-bottom: var(--space-2xl);
+  max-width: 560px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -61,7 +96,7 @@
 
 .scrollIndicator {
   position: absolute;
-  bottom: var(--space-xl);
+  bottom: var(--space-2xl);
   left: 50%;
   transform: translateX(-50%);
   background: none;
@@ -90,10 +125,14 @@
 
 @media (min-width: 768px) {
   .name {
-    font-size: var(--font-size-5xl);
+    font-size: 4.5rem;
   }
 
   .title {
     font-size: var(--font-size-2xl);
+  }
+
+  .bio {
+    font-size: 1.25rem;
   }
 }

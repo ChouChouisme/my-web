@@ -9,16 +9,17 @@
 }
 
 .info {
-  background-color: var(--color-background);
+  background-color: var(--color-background-elevated);
   border-radius: var(--radius-xl);
   padding: var(--space-xl);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
 }
 
 .contact {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-md);
+  gap: var(--space-lg);
   margin-bottom: var(--space-xl);
   padding-bottom: var(--space-lg);
   border-bottom: 1px solid var(--color-border);
@@ -27,13 +28,14 @@
 .contactItem {
   display: flex;
   align-items: center;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
   color: var(--color-text-light);
   font-size: var(--font-size-sm);
 }
 
 .contactItem svg {
   color: var(--color-primary);
+  flex-shrink: 0;
 }
 
 .section {
@@ -48,10 +50,12 @@
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  font-size: var(--font-size-lg);
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
   font-weight: 600;
   color: var(--color-text);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
+  letter-spacing: -0.01em;
 }
 
 .sectionTitle svg {
@@ -68,18 +72,27 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-xs);
-  padding: var(--space-md);
+  padding: var(--space-lg);
   background-color: var(--color-background-alt);
   border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition-normal);
+}
+
+.educationItem:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
 }
 
 .degree {
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
+  font-size: var(--font-size-sm);
 }
 
 .field {
   color: var(--color-text);
+  font-weight: 500;
 }
 
 .school {
@@ -102,6 +115,6 @@
   .educationItem {
     grid-template-columns: auto 1fr auto auto;
     align-items: center;
-    gap: var(--space-md);
+    gap: var(--space-lg);
   }
 }
